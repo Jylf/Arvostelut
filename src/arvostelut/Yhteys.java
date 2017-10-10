@@ -20,7 +20,7 @@ public class Yhteys {
     private String salasana = "17RY_Xie";
     
     private String ravintolaLisaysSQL = "insert into RavintolaArv(pvm,ravnimi,ruokannos,sanarvos,numarvo,ravtyypp,arvnimi) values(?,?,?,?,?,?,?)";
-    private String ravintolanHakuSQL = "select * from RavintolaArv where Ravintola_ID=?";
+//    private String ravintolanHakuSQL = "select * from RavintolaArv where Ravintola_ID=?";
     
     
     public void lisaaArvio(Arvio uusi){

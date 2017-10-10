@@ -37,6 +37,8 @@ public class Arvio {
         this.paivamaara = paivamaara;
     }
 
+
+
     public String getRavintolannimi() {
         return ravintolannimi;
     }
