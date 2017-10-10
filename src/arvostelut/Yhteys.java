@@ -19,7 +19,7 @@ public class Yhteys {
     private String kayttaja = "s1700330";
     private String salasana = "17RY_Xie";
     
-    private String ravintolaLisaysSQL = "insert into RavintolaArv(ravintolannimi) values(?)";
+    private String ravintolaLisaysSQL = "insert into RavintolaArv(ravnimi) values(?)";
     private String ravintolanHakuSQL = "select * from RavintolaArv where Ravintola_ID=?";
     
     
