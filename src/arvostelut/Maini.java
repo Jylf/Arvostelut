@@ -20,12 +20,15 @@ public class Maini {
        
         Scanner lukija = new Scanner(System.in);
         
-        System.out.println("Anna ravintolan nimi :");
+        System.out.print("Anna ravintolan nimi :");
         String ravintolannimi = lukija.nextLine();
-//        System.out.println("Anna uuden henkilön sukunimi");
-//        String snimi = lukija.nextLine();
-//        System.out.println("Anna uuden henkilön syntaika");
-//        int svuosi = lukija.nextInt();
+        System.out.print("Anna päivämäärä :");
+        int paivamaara = lukija.nextInt();
+        System.out.print("Anna ravintolan tyyppi :");
+        String tyyppi = lukija.nextLine();
+        System.out.print("Anna ruoka-annos: ");
+        String ruokaannos = lukija.nextLine();
+        
         
         yhteysTietokantaan.lisaaArvio(new Arvio(ravintolannimi));
         

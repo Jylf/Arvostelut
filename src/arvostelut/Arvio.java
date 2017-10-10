@@ -12,6 +12,7 @@ package arvostelut;
 public class Arvio {
     
     private String ravintolannimi;
+   
 
     public String getRavintolannimi() {
         return ravintolannimi;
