@@ -28,6 +28,8 @@ public class Maini {
         int paivamaara = lukija.nextInt();
         System.out.println("Anna arvosana");
         int arvo = lukija.nextInt();
+        System.out.println("Anna arvio: ");
+        String arvostelu = lukija.nextLine();
         System.out.println("Mikä on ravintolan tyyppi?");
         String ravintolantyyppi = lukija.nextLine();
         System.out.println("Mikä on nimesi?");
