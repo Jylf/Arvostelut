@@ -19,23 +19,9 @@ public class Arvio {
     private String arvijoija;
     private String arvostelu;
 
-    public String getArvostelu() {
-        return arvostelu;
-    }
-
-    public void setArvostelu(String arvostelu) {
-        this.arvostelu = arvostelu;
-    }
-
-
-    public Arvio(int paivamaara, String ravintolannimi, String ruoka_annos, String arvostelu, int arvo, String ravintolantyyppi, String arvijoija) {
-        this.ravintolannimi = ravintolannimi;
-        this.ruoka_annos = ruoka_annos;
-        this.paivamaara = paivamaara;
-        this.arvo = arvo;
-        this.ravintolantyyppi = ravintolantyyppi;
-        this.arvijoija = arvijoija;
-        this.arvostelu = arvostelu;
+    @Override
+    public String toString() {
+        return "Arvio{" + "ravintolannimi=" + ravintolannimi + ", ruoka_annos=" + ruoka_annos + ", paivamaara=" + paivamaara + ", arvo=" + arvo + ", ravintolantyyppi=" + ravintolantyyppi + ", arvijoija=" + arvijoija + ", arvostelu=" + arvostelu + '}';
     }
 
     public String getRavintolannimi() {
@@ -86,13 +72,23 @@ public class Arvio {
         this.arvijoija = arvijoija;
     }
 
-    @Override
-    public String toString() {
-        return "Arvio{" + "ravintolannimi=" + ravintolannimi + ", ruoka_annos=" + ruoka_annos + ", paivamaara=" + paivamaara + ", arvo=" + arvo + ", ravintolantyyppi=" + ravintolantyyppi + ", arvijoija=" + arvijoija + '}';
+    public String getArvostelu() {
+        return arvostelu;
     }
 
+    public void setArvostelu(String arvostelu) {
+        this.arvostelu = arvostelu;
+    }
 
+    public Arvio(int paivamaara, String ravintolannimi, String ruoka_annos, String arvostelu, int arvo, String ravintolantyyppi, String arvijoija) {
+        this.ravintolannimi = ravintolannimi;
+        this.ruoka_annos = ruoka_annos;
+        this.paivamaara = paivamaara;
+        this.arvo = arvo;
+        this.ravintolantyyppi = ravintolantyyppi;
+        this.arvijoija = arvijoija;
+        this.arvostelu = arvostelu;
+    }
 }
 
-    
 
