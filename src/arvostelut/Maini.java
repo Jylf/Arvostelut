@@ -22,16 +22,24 @@ public class Maini {
         
         System.out.print("Anna päivämäärä: ");
         int paivamaara = lukija.nextInt();
+        lukija.nextLine();
+        
         System.out.print("Anna ravintolan nimi: ");
         String ravintolannimi = lukija.nextLine();
+        
         System.out.print("Anna ruoka-annos: ");
         String ruoka_annos = lukija.nextLine();
+        
         System.out.print("Anna arvostelu");
         String arvostelu = lukija.nextLine();
+        
         System.out.print("Anna arvosana: ");
         int arvo = lukija.nextInt();
+        lukija.nextLine();
+        
         System.out.print("Mikä on ravintolan tyyppi?");
         String ravintolantyyppi = lukija.nextLine();
+        
         System.out.print("Mikä on nimesi?");
         String arvijoija = lukija.nextLine();
         
