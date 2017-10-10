@@ -17,6 +17,19 @@ public class Arvio {
     private int arvo;
     private String ravintolantyyppi;
     private String arvijoija;
+    private String arvostelu;
+
+    public String getArvostelu() {
+        return arvostelu;
+    }
+
+    public void setArvostelu(String arvostelu) {
+        this.arvostelu = arvostelu;
+    }
+
+    public Arvio(String arvostelu) {
+        this.arvostelu = arvostelu;
+    }
 
     public Arvio(String ravintolannimi, String ruoka_annos, int paivamaara, int arvo, String ravintolantyyppi, String arvijoija) {
         this.ravintolannimi = ravintolannimi;
