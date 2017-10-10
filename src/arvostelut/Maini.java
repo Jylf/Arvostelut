@@ -22,28 +22,23 @@ public class Maini {
         
         System.out.print("Anna päivämäärä: ");
         int paivamaara = lukija.nextInt();
-        System.out.println("Anna ravintolan nimi: ");
+        System.out.print("Anna ravintolan nimi: ");
         String ravintolannimi = lukija.nextLine();
-        System.out.println("Anna ruoka-annos: ");
+        System.out.print("Anna ruoka-annos: ");
         String ruoka_annos = lukija.nextLine();
-        System.out.println("Anna arvostelu");
+        System.out.print("Anna arvostelu");
         String arvostelu = lukija.nextLine();
-        System.out.println("Anna arvosana: ");
+        System.out.print("Anna arvosana: ");
         int arvo = lukija.nextInt();
-        System.out.println("Mikä on ravintolan tyyppi?");
+        System.out.print("Mikä on ravintolan tyyppi?");
         String ravintolantyyppi = lukija.nextLine();
-        System.out.println("Mikä on nimesi?");
+        System.out.print("Mikä on nimesi?");
         String arvijoija = lukija.nextLine();
         
         
-        yhteysTietokantaan.lisaaArvio(new Arvio(paivamaara));
-        yhteysTietokantaan.lisaaArvio(new Arvio(ravintolannimi));
-        yhteysTietokantaan.lisaaArvio(new Arvio(ruoka_annos));
-        yhteysTietokantaan.lisaaArvio(new Arvio(arvostelu));
-        yhteysTietokantaan.lisaaArvio(new Arvio(arvo));
-        yhteysTietokantaan.lisaaArvio(new Arvio(ravintolantyyppi));
-        yhteysTietokantaan.lisaaArvio(new Arvio(arvijoija));
         
+        yhteysTietokantaan.lisaaArvio(new Arvio(paivamaara, ravintolannimi, ruoka_annos, arvostelu, arvo, ravintolantyyppi, arvijoija));
+       
     }
     
 }
