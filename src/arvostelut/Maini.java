@@ -22,10 +22,12 @@ public class Maini {
         
         System.out.println("Anna ravintolan nimi :");
         String ravintolannimi = lukija.nextLine();
-//        System.out.println("Anna uuden henkilön sukunimi");
-//        String snimi = lukija.nextLine();
-//        System.out.println("Anna uuden henkilön syntaika");
-//        int svuosi = lukija.nextInt();
+        System.out.println("Ruoka-annos");
+        String ruoka_annos = lukija.nextLine();
+        System.out.println("Anna päivämäärä");
+        int paivamaara = lukija.nextInt();
+        System.out.println("Anna päivämäärä");
+        int arvosana = lukija.nextInt();
         
         yhteysTietokantaan.lisaaArvio(new Arvio(ravintolannimi));
         
