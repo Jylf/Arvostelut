@@ -34,13 +34,13 @@ public class Yhteys {
         }
         try{
            PreparedStatement ravintolanLisays = yhteys.prepareStatement(ravintolaLisaysSQL);
-           ravintolanLisays.setString(1, uusi.getPaivamaara());
+           ravintolanLisays.setInt(1, uusi.getPaivamaara());
            ravintolanLisays.setString(2, uusi.getRavintolannimi());
            ravintolanLisays.setString(3, uusi.getRuoka_annos());
-           ravintolanLisays.setString(4, uusi.getRavintolannimi());
-           ravintolanLisays.setString(1, uusi.getRavintolannimi());
-           ravintolanLisays.setString(1, uusi.getRavintolannimi());
-           ravintolanLisays.setString(1, uusi.getRavintolannimi());
+           ravintolanLisays.setString(4, uusi.getArvostelu());
+           ravintolanLisays.setInt(5, uusi.getArvo());
+           ravintolanLisays.setString(6, uusi.getRavintolantyyppi());
+           ravintolanLisays.setString(7, uusi.getArvijoija());
 //           henkilonLisays.setString(2, uusi.getSukunimi());
 //           henkilonLisays.setInt(3,uusi.getSyntvuosi());
            
