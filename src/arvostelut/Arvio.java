@@ -27,17 +27,15 @@ public class Arvio {
         this.arvostelu = arvostelu;
     }
 
-    public Arvio(String arvostelu) {
-        this.arvostelu = arvostelu;
-    }
 
-    public Arvio(String ravintolannimi, String ruoka_annos, int paivamaara, int arvo, String ravintolantyyppi, String arvijoija) {
+    public Arvio(int paivamaara, String ravintolannimi, String ruoka_annos, String arvostelu, int arvo, String ravintolantyyppi, String arvijoija) {
         this.ravintolannimi = ravintolannimi;
         this.ruoka_annos = ruoka_annos;
         this.paivamaara = paivamaara;
         this.arvo = arvo;
         this.ravintolantyyppi = ravintolantyyppi;
         this.arvijoija = arvijoija;
+        this.arvostelu = arvostelu;
     }
 
     public String getRavintolannimi() {
