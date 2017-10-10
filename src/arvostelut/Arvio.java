@@ -13,12 +13,12 @@ public class Arvio {
     
     private String ravintolannimi;
     private String ruoka_annos;
-    private Int paivamaara; 
-    private Int arvo;
+    private int paivamaara; 
+    private int arvo;
     private String ravintolantyyppi;
     private String arvijoija;
 
-    public Arvio(String ravintolannimi, String ruoka_annos, Int paivamaara, Int arvo, String ravintolantyyppi, String arvijoija) {
+    public Arvio(String ravintolannimi, String ruoka_annos, int paivamaara, int arvo, String ravintolantyyppi, String arvijoija) {
         this.ravintolannimi = ravintolannimi;
         this.ruoka_annos = ruoka_annos;
         this.paivamaara = paivamaara;
@@ -43,19 +43,19 @@ public class Arvio {
         this.ruoka_annos = ruoka_annos;
     }
 
-    public Int getPaivamaara() {
+    public int getPaivamaara() {
         return paivamaara;
     }
 
-    public void setPaivamaara(Int paivamaara) {
+    public void setPaivamaara(int paivamaara) {
         this.paivamaara = paivamaara;
     }
 
-    public Int getArvo() {
+    public int getArvo() {
         return arvo;
     }
 
-    public void setArvo(Int arvo) {
+    public void setArvo(int arvo) {
         this.arvo = arvo;
     }
 
