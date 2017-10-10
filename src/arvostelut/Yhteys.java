@@ -19,7 +19,7 @@ public class Yhteys {
     private String kayttaja = "s1700330";
     private String salasana = "17RY_Xie";
     
-    private String ravintolaLisaysSQL = "insert into RavintolaArv(ravnimi) values(?)";
+    private String ravintolaLisaysSQL = "insert into RavintolaArv(pvm,ravnimi,ruokannos,sanarvos,numarvo,ravtyypp,arvnimi) values(?,?,?,?,?,?,?)";
     private String ravintolanHakuSQL = "select * from RavintolaArv where Ravintola_ID=?";
     
     
@@ -34,6 +34,12 @@ public class Yhteys {
         }
         try{
            PreparedStatement ravintolanLisays = yhteys.prepareStatement(ravintolaLisaysSQL);
+           ravintolanLisays.setString(1, uusi.getPaivamaara());
+           ravintolanLisays.setString(2, uusi.getRavintolannimi());
+           ravintolanLisays.setString(3, uusi.getRuoka_annos());
+           ravintolanLisays.setString(4, uusi.getRavintolannimi());
+           ravintolanLisays.setString(1, uusi.getRavintolannimi());
+           ravintolanLisays.setString(1, uusi.getRavintolannimi());
            ravintolanLisays.setString(1, uusi.getRavintolannimi());
 //           henkilonLisays.setString(2, uusi.getSukunimi());
 //           henkilonLisays.setInt(3,uusi.getSyntvuosi());
