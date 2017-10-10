@@ -11,17 +11,30 @@ package arvostelut;
  */
 public class Arvio {
     
+    private int paivamaara;
     private String ravintolannimi;
-    private String ruoka_annos;
-    private int paivamaara; 
+    private String ruoka_annos; 
+    private String arvostelu;
     private int arvo;
     private String ravintolantyyppi;
     private String arvijoija;
-    private String arvostelu;
 
-    @Override
-    public String toString() {
-        return "Arvio{" + "ravintolannimi=" + ravintolannimi + ", ruoka_annos=" + ruoka_annos + ", paivamaara=" + paivamaara + ", arvo=" + arvo + ", ravintolantyyppi=" + ravintolantyyppi + ", arvijoija=" + arvijoija + ", arvostelu=" + arvostelu + '}';
+    public Arvio(int paivamaara, String ravintolannimi, String ruoka_annos, String arvostelu, int arvo, String ravintolantyyppi, String arvijoija) {
+        this.paivamaara = paivamaara;
+        this.ravintolannimi = ravintolannimi;
+        this.ruoka_annos = ruoka_annos;
+        this.arvostelu = arvostelu;
+        this.arvo = arvo;
+        this.ravintolantyyppi = ravintolantyyppi;
+        this.arvijoija = arvijoija;
+    }
+
+    public int getPaivamaara() {
+        return paivamaara;
+    }
+
+    public void setPaivamaara(int paivamaara) {
+        this.paivamaara = paivamaara;
     }
 
     public String getRavintolannimi() {
@@ -40,12 +53,12 @@ public class Arvio {
         this.ruoka_annos = ruoka_annos;
     }
 
-    public int getPaivamaara() {
-        return paivamaara;
+    public String getArvostelu() {
+        return arvostelu;
     }
 
-    public void setPaivamaara(int paivamaara) {
-        this.paivamaara = paivamaara;
+    public void setArvostelu(String arvostelu) {
+        this.arvostelu = arvostelu;
     }
 
     public int getArvo() {
@@ -72,23 +85,15 @@ public class Arvio {
         this.arvijoija = arvijoija;
     }
 
-    public String getArvostelu() {
-        return arvostelu;
+    @Override
+    public String toString() {
+        return "Arvio{" + "paivamaara=" + paivamaara + ", ravintolannimi=" + ravintolannimi + ", ruoka_annos=" + ruoka_annos + ", arvostelu=" + arvostelu + ", arvo=" + arvo + ", ravintolantyyppi=" + ravintolantyyppi + ", arvijoija=" + arvijoija + '}';
     }
-
-    public void setArvostelu(String arvostelu) {
-        this.arvostelu = arvostelu;
-    }
-
-    public Arvio(int paivamaara, String ravintolannimi, String ruoka_annos, String arvostelu, int arvo, String ravintolantyyppi, String arvijoija) {
-        this.ravintolannimi = ravintolannimi;
-        this.ruoka_annos = ruoka_annos;
-        this.paivamaara = paivamaara;
-        this.arvo = arvo;
-        this.ravintolantyyppi = ravintolantyyppi;
-        this.arvijoija = arvijoija;
-        this.arvostelu = arvostelu;
-    }
+    
+    
+    
+    
+    
+    
+    
 }
-
-

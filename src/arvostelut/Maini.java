@@ -12,14 +12,13 @@ import java.util.Scanner;
  * @author s1700331
  */
 public class Maini {
+
     public static void main(String[] args) {
-  
+
         Yhteys yhteysTietokantaan = new Yhteys();
-        
-        
-       
+
         Scanner lukija = new Scanner(System.in);
-        
+
         System.out.print("Anna päivämäärä: ");
         int paivamaara = lukija.nextInt();
         System.out.print("Anna ravintolan nimi: ");
@@ -34,11 +33,9 @@ public class Maini {
         String ravintolantyyppi = lukija.nextLine();
         System.out.print("Mikä on nimesi?");
         String arvijoija = lukija.nextLine();
-        
-        
-        
+
         yhteysTietokantaan.lisaaArvio(new Arvio(paivamaara, ravintolannimi, ruoka_annos, arvostelu, arvo, ravintolantyyppi, arvijoija));
-       
+
     }
-    
+
 }
