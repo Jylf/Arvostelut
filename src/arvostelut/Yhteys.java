@@ -1,17 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package arvostelut;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
-/**
- *
- * @author s1700331
- */
+
 public class Yhteys {
     
     private String ajuri="com.mysql.jdbc.Driver";
@@ -19,8 +13,8 @@ public class Yhteys {
     private String kayttaja = "s1700330";
     private String salasana = "17RY_Xie";
     
-    private String ravintolaLisaysSQL = "insert into RavintolaArvostelu(pvm,ravnimi,ruokannos,sanarvos,numarvo,ravtyypp,arvnimi) values(?,?,?,?,?,?,?)";
-//    private String ravintolanHakuSQL = "select * from RavintolaArv where Ravintola_ID=?";
+    private String ravintolaLisaysSQL = "insert into RavintolanArvostelu(pvm,ravnimi,ruokannos,sanarvos,numarvo,ravtyypp,arvnimi) values(?,?,?,?,?,?,?)";
+    private String tiedonHakuSQL = "select * from RavintolanArvostelu where Ravintola_ID=?";
     
     
     public void lisaaArvio(Arvio uusi){
@@ -46,12 +40,48 @@ public class Yhteys {
            
            ravintolanLisays.executeUpdate();
            ravintolanLisays.close();
-            
+           
+
         }catch(Exception e){
             
             System.out.println("Lisäys ei onnistunut ");
         }
-    }   
+    }
+          public Arvio haeArvio(){
+        Connection yhteys=null;
+        try{
+           yhteys = Yhteydenhallinta.avaaYhteys(ajuri,url,kayttaja,salasana);
+           
+        }catch(Exception e){
+            System.out.println("Tietovarasto ei toimi");
+        } 
+        
+        try{
+          PreparedStatement tiedonHaku = yhteys.prepareStatement(tiedonHakuSQL);
+           ResultSet hakutulos = tiedonHaku.executeQuery();
+           while(hakutulos.next()){
+               int Ravintola_ID = hakutulos.getInt(1);
+               int pvm = hakutulos.getInt(2);
+               String ravnimi = hakutulos.getString(3);
+               String ruokannos = hakutulos.getString(4);
+               String sanarvos = hakutulos.getString(5);
+               int numarvo = hakutulos.getInt(6);
+               String ravtyypp = hakutulos.getString(7);
+               String arvnimi = hakutulos.getString(8);
+               System.out.println("Haetut tiedot: " + Ravintola_ID + pvm + ravnimi + ruokannos + sanarvos + numarvo + ravtyypp + arvnimi);
+               
+               
+           }
+           
+           
+           
+           }catch(Exception e){
+               System.out.println("Haku ei onnistunut");
+           }
+       
     
     
-}
+                return null;
+              }
+              }
+

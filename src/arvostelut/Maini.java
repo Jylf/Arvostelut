@@ -18,6 +18,14 @@ public class Maini {
         Yhteys yhteysTietokantaan = new Yhteys();
 
         Scanner lukija = new Scanner(System.in);
+        
+        
+        System.out.println("Annatko arvostelun vai haet? A/H");
+        String vastaus = lukija.nextLine();
+        if(vastaus.equals("A"))
+        {
+        
+        
 
         System.out.print("Anna päivämäärä: ");
         int paivamaara = lukija.nextInt();
@@ -43,7 +51,14 @@ public class Maini {
         String arvijoija = lukija.nextLine();
 
         yhteysTietokantaan.lisaaArvio(new Arvio(paivamaara, ravintolannimi, ruoka_annos, arvostelu, arvo, ravintolantyyppi, arvijoija));
-
+        }
+        if(vastaus.equals("H")){
+            
+            
+            
+            
+            yhteysTietokantaan.haeArvio();
+        }
     }
 
 }
