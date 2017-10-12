@@ -28,7 +28,7 @@ public class Yhteys {
         }
         try{
            PreparedStatement ravintolanLisays = yhteys.prepareStatement(ravintolaLisaysSQL);
-           ravintolanLisays.setInt(1, uusi.getPaivamaara());
+           ravintolanLisays.setString(1, uusi.getPaivamaara());
            ravintolanLisays.setString(2, uusi.getRavintolannimi());
            ravintolanLisays.setString(3, uusi.getRuoka_annos());
            ravintolanLisays.setString(4, uusi.getArvostelu());
@@ -47,7 +47,7 @@ public class Yhteys {
             System.out.println("Lisäys ei onnistunut ");
         }
     }
-          public Arvio haeArvio(){
+          public Arvio haeArvio(int id){
         Connection yhteys=null;
         try{
            yhteys = Yhteydenhallinta.avaaYhteys(ajuri,url,kayttaja,salasana);
@@ -58,19 +58,17 @@ public class Yhteys {
         
         try{
           PreparedStatement tiedonHaku = yhteys.prepareStatement(tiedonHakuSQL);
+          tiedonHaku.setInt(1, id);
            ResultSet hakutulos = tiedonHaku.executeQuery();
            while(hakutulos.next()){
-               int Ravintola_ID = hakutulos.getInt(1);
-               int pvm = hakutulos.getInt(2);
-               String ravnimi = hakutulos.getString(3);
-               String ruokannos = hakutulos.getString(4);
-               String sanarvos = hakutulos.getString(5);
-               int numarvo = hakutulos.getInt(6);
-               String ravtyypp = hakutulos.getString(7);
-               String arvnimi = hakutulos.getString(8);
-               System.out.println("Haetut tiedot: " + Ravintola_ID + pvm + ravnimi + ruokannos + sanarvos + numarvo + ravtyypp + arvnimi);
-               
-               
+               Arvio a = new Arvio(hakutulos.getString(2),
+                                   hakutulos.getString(3),
+                                   hakutulos.getString(4),
+                                   hakutulos.getString(5),
+                                   hakutulos.getInt(6),
+                                   hakutulos.getString(7),
+                                   hakutulos.getString(8));
+               return a;
            }
            
            

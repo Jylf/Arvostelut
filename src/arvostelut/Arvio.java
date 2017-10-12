@@ -10,16 +10,16 @@ package arvostelut;
  * @author s1700331
  */
 public class Arvio {
-    
-    private int paivamaara;
+
+    private String paivamaara;
     private String ravintolannimi;
-    private String ruoka_annos; 
+    private String ruoka_annos;
     private String arvostelu;
     private int arvo;
     private String ravintolantyyppi;
     private String arvijoija;
 
-    public Arvio(int paivamaara, String ravintolannimi, String ruoka_annos, String arvostelu, int arvo, String ravintolantyyppi, String arvijoija) {
+    public Arvio(String paivamaara, String ravintolannimi, String ruoka_annos, String arvostelu, int arvo, String ravintolantyyppi, String arvijoija) {
         this.paivamaara = paivamaara;
         this.ravintolannimi = ravintolannimi;
         this.ruoka_annos = ruoka_annos;
@@ -29,15 +29,13 @@ public class Arvio {
         this.arvijoija = arvijoija;
     }
 
-    public int getPaivamaara() {
+    public String getPaivamaara() {
         return paivamaara;
     }
 
-    public void setPaivamaara(int paivamaara) {
+    public void setPaivamaara(String paivamaara) {
         this.paivamaara = paivamaara;
     }
-
-
 
     public String getRavintolannimi() {
         return ravintolannimi;
@@ -91,11 +89,5 @@ public class Arvio {
     public String toString() {
         return "Arvio{" + "paivamaara=" + paivamaara + ", ravintolannimi=" + ravintolannimi + ", ruoka_annos=" + ruoka_annos + ", arvostelu=" + arvostelu + ", arvo=" + arvo + ", ravintolantyyppi=" + ravintolantyyppi + ", arvijoija=" + arvijoija + '}';
     }
-    
-    
-    
-    
-    
-    
-    
+
 }

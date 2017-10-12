@@ -28,8 +28,8 @@ public class Maini {
         
 
         System.out.print("Anna päivämäärä: ");
-        int paivamaara = lukija.nextInt();
-        lukija.nextLine();
+        String paivamaara = lukija.nextLine();
+        
         
         System.out.print("Anna ravintolan nimi: ");
         String ravintolannimi = lukija.nextLine();
@@ -53,11 +53,10 @@ public class Maini {
         yhteysTietokantaan.lisaaArvio(new Arvio(paivamaara, ravintolannimi, ruoka_annos, arvostelu, arvo, ravintolantyyppi, arvijoija));
         }
         if(vastaus.equals("H")){
+            System.out.print("Anna ID: ");
+            int haku = lukija.nextInt();
             
-            
-            
-            
-            yhteysTietokantaan.haeArvio();
+            System.out.println(yhteysTietokantaan.haeArvio(haku)); 
         }
     }
 
